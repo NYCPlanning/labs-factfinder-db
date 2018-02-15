@@ -46,3 +46,11 @@ Find these by running `dokku postgres:info factfinder`, and set them in the loca
 
 `create_indices.sh` - adds btree indices to the decennial table and each of the 4 acs tables.
 
+## Linking Containers
+
+Linking the `dokku-postgres` container and the `factfinder-api` app will add the database connection string to `factfinder-api` as an environment variable: `DATABASE_URL=postgres://postgres:{password}@{dockerhostname}:{port}/factfinder` . 
+  This url is then used by the `pg` node package to connect to the database.
+  
+`dokku postgres:link factfinder factfinder-api`
+
+
