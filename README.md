@@ -29,7 +29,7 @@ An easy way to get these files from your local machine to the server is to use `
 
 This sql script can be executed using the `dokku-postgres` `connect` command, which runs the sql inside the running postgres container.
 
-`dokku postgres:connect factfinder < create.sql`
+`dokku postgres:connect factfinder < create_tables.sql`
 
 ### psql scripts
 
