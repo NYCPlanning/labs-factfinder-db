@@ -1,4 +1,4 @@
-DROP TABLE demographic;
+DROP TABLE IF EXISTS demographic;
 CREATE TABLE demographic (
   geotype text,
   geogname text,
@@ -12,7 +12,7 @@ CREATE TABLE demographic (
   z double precision
 );
 
-DROP TABLE social;
+DROP TABLE IF EXISTS social;
 CREATE TABLE social (
   geotype text,
   geogname text,
@@ -39,7 +39,7 @@ CREATE TABLE economic (
   p double precision,
   z double precision
 );
-DROP TABLE housing;
+DROP TABLE IF EXISTS housing;
 CREATE TABLE housing (
   geotype text,
   geogname text,
@@ -53,7 +53,7 @@ CREATE TABLE housing (
   z double precision
 );
 
-DROP TABLE decennial;
+DROP TABLE IF EXISTS decennial;
 CREATE TABLE decennial (
   year text,
   geoid text,
@@ -61,7 +61,7 @@ CREATE TABLE decennial (
   value double precision
 );
 
-DROP TABLE factfinder_metadata;
+DROP TABLE IF EXISTS factfinder_metadata;
 CREATE TABLE factfinder_metadata (
   variablename text, 
   producttype text,
@@ -75,7 +75,7 @@ CREATE TABLE factfinder_metadata (
   infltnfctr10to16 text
 );
 
-DROP TABLE decennial_dictionary;
+DROP TABLE IF EXISTS decennial_dictionary;
 CREATE TABLE decennial_dictionary (
   variablename text, 
   producttype text,
