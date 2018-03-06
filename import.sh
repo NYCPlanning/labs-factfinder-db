@@ -1,4 +1,4 @@
-PGPASSWORD=$PGPASSWORD psql -h $PGIPADDRESS -U postgres -d factfinder << EOF
+PGPASSWORD=$PGPASSWORD PGPASSWORD=$PGPASSWORD psql -h $PGIPADDRESS -U postgres -d $PGPASSWORD << EOF
 
 TRUNCATE TABLE demographic;
 \COPY demographic FROM 'data/demographic.csv' CSV HEADER;
