@@ -3,7 +3,7 @@ PGPASSWORD=$PGPASSWORD psql -h $PGIPADDRESS -U postgres -d $PGDATABASE << EOF
 TRUNCATE TABLE demographic;
 \COPY demographic FROM 'data/demographic.csv' CSV HEADER;
 
-TRUNCATE TABLE economic;
+TRUNCATE TABLE social;
 \COPY social FROM 'data/social.csv' CSV HEADER;
 
 TRUNCATE TABLE economic;
