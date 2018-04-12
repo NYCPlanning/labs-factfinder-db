@@ -36,7 +36,10 @@ This sql script can be executed using the `dokku-postgres` `connect` command, wh
 The remaining scripts make use of psql, which runs on the host machine but connects to the dokku postgresql instance.  In order to connect, two environment variables must be set:
 
 `$PGPASSWORD` - the password that `dokku-postgres` created for the database.
+
 `$PGIPADDRESS` - the local IP address of the postgresql container.
+
+`$PGDATABASE` - the database name (not to be confused with the dokku-postgres container name)
 
 Find these by running `dokku postgres:info factfinder`, and set them in the local environment.
 
