@@ -9,7 +9,7 @@ This repo contains `SQL` and bash scripts for creating, importing, and populatin
 
 Create a clean postgres database called `factfinder` using `dokku-postgres`
 
-`postgres:create factfinder`
+`dokku postgres:create factfinder-$(date -d "today" +"%Y%m%d%H%M")`
 
 ## Files to Import
 
